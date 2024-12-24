@@ -8,10 +8,12 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -55,10 +57,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ContohColumn(nama: String, pesan: String, modifier: Modifier) {
-    Column(modifier = modifier) {
+    Row(modifier = modifier.fillMaxSize()) {
         Box(
             modifier = Modifier
-                .fillMaxWidth()
+                .weight(1f)
                 .height(100.dp)
                 .padding(16.dp)
                 .border(1.dp, Color.Gray),
@@ -76,6 +78,7 @@ fun ContohColumn(nama: String, pesan: String, modifier: Modifier) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
+                .weight(1f)
                 .height(100.dp)
                 .padding(16.dp)
                 .border(1.dp, Color.Gray),
